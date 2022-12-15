@@ -31,6 +31,18 @@ export class CalculadoraComponent implements OnInit {
     this.operacao = null;
   }
 
+  limparAtual(): void {
+    this.numero2 === null ? this.numero1 = '0' : this.numero2 = null;
+  }
+
+  corrigir(): void {
+    if (this.numero2 === null) {
+      this.numero1 = this.numero1.slice(0, -1);
+    } else {
+      this.numero2 = this.numero2.slice(0, -1);
+    }
+  }
+
   /**
    * Adiciona o numero selecionado para ser cálculado posteriormente
    *
@@ -64,6 +76,15 @@ export class CalculadoraComponent implements OnInit {
     return numAtual + numConcat;
   }
 
+  /**
+   * Define a operação a ser executada.
+   * Caso existam dois parametros e uma operação na memória,
+   * executa a operação anterior antes de definir a nova operação.
+   * Caso exista apenas um parametro e uma operação, troca a operação para a atual
+   *
+   * @param operacao string, aceita como valores os simbolos + , -, /, *
+   * @returns
+   */
   definirOperacao(operacao: string): void {
     // caso não exista operação definida apenas define a operação
     if (this.operacao === null) {
@@ -81,6 +102,12 @@ export class CalculadoraComponent implements OnInit {
       this.numero1 = this.resultado.toString();
       this.numero2 = null;
       this.resultado = null;
+    }
+
+    // caso exista uma operação mas não exista o segundo operando a operação será substituida
+    if (this.numero2 === null && this.operacao !== null) {
+      this.operacao = operacao;
+      return
     }
   }
 
@@ -103,11 +130,16 @@ export class CalculadoraComponent implements OnInit {
    *
    * @returns string
    */
-  get display(): string {
-    if (this.resultado !== null) return this.resultado.toString();
+  get display(): string[] {
+    if (this.resultado !== null) return [
+      this.resultado.toString(),
+      `${this.numero1} ${this.operacao} ${this.numero2}`
+    ];
 
-    if (this.numero2 !== null) return this.numero2;
+    if (this.numero2 !== null) return [this.numero2, `${this.numero1} ${this.operacao}`];
 
-    return this.numero1
+    if (this.operacao !== null) return ['', `${this.numero1} ${this.operacao}`];
+
+    return [this.numero1, '']
   }
 }
