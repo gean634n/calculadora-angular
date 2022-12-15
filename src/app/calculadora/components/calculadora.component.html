@@ -7,24 +7,24 @@
       <div id="current-operation" [innerText]="display[0]"></div>
     </div>
     <div id="buttons-container">
-      <button (click)="limparAtual()">CE</button>
-      <button (click)="limpar()">C</button>
-      <button (click)="corrigir()">DEL</button>
-      <button (click)="definirOperacao('/')">/</button>
-      <button class="number" (click)="adicionaNumero('7')">7</button>
-      <button class="number" (click)="adicionaNumero('8')">8</button>
-      <button class="number" (click)="adicionaNumero('9')">9</button>
-      <button (click)="definirOperacao('*')">*</button>
-      <button class="number" (click)="adicionaNumero('4')">4</button>
-      <button class="number" (click)="adicionaNumero('5')">5</button>
-      <button class="number" (click)="adicionaNumero('6')">6</button>
-      <button (click)="definirOperacao('-')">-</button>
-      <button class="number" (click)="adicionaNumero('1')">1</button>
-      <button class="number" (click)="adicionaNumero('2')">2</button>
-      <button class="number" (click)="adicionaNumero('3')">3</button>
-      <button (click)="definirOperacao('+')">+</button>
-      <button class="number" (click)="adicionaNumero('0')">0</button>
-      <button class="number" (click)="adicionaNumero('.')">.</button>
+      <button id="ce-btn" (click)="limparAtual()">CE</button>
+      <button id="c-btn" (click)="limpar()">C</button>
+      <button id="del-btn" (click)="corrigir()">DEL</button>
+      <button id="div-btn" (click)="definirOperacao('/')">/</button>
+      <button id="btn7" class="number" (click)="adicionaNumero('7')">7</button>
+      <button id="btn8" class="number" (click)="adicionaNumero('8')">8</button>
+      <button id="btn9" class="number" (click)="adicionaNumero('9')">9</button>
+      <button id="mult-btn" (click)="definirOperacao('*')">*</button>
+      <button id="btn4" class="number" (click)="adicionaNumero('4')">4</button>
+      <button id="btn5" class="number" (click)="adicionaNumero('5')">5</button>
+      <button id="btn6" class="number" (click)="adicionaNumero('6')">6</button>
+      <button id="sub-btn" (click)="definirOperacao('-')">-</button>
+      <button id="btn1" class="number" (click)="adicionaNumero('1')">1</button>
+      <button id="btn2" class="number" (click)="adicionaNumero('2')">2</button>
+      <button id="btn3" class="number" (click)="adicionaNumero('3')">3</button>
+      <button id="add-btn" (click)="definirOperacao('+')">+</button>
+      <button id="btn0" class="number" (click)="adicionaNumero('0')">0</button>
+      <button id="btn-dot" class="number" (click)="adicionaNumero('.')">.</button>
       <button id="equal-btn" (click)="calcular()">=</button>
     </div>
   </div>
