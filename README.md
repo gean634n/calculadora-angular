@@ -1,27 +1,12 @@
 # Calculadora
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+Esse projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.10.
 
-## Development server
+## Funcionalidades
+A calculadora a apresenta as quatro operações basicas bem como os botões `C` para limpar todos os valores, `CE` para limpar o valor atual e `DEL` para deletar o ultimo valor digitado.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Server de desenvolvimento
+Rode `ng serve` para um server de desenvolvimento. Abra a pagina `http://localhost:4200/`. A aplicação vai atualizar altomaticamente se você fizer qualquer alteração no código fonte.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Deploy
+Caso queira apenas testar a aplicação visite a página `https://gean634n.github.io/calculadora`
