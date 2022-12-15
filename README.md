@@ -9,4 +9,4 @@ A calculadora a apresenta as quatro operações basicas bem como os botões `C` 
 Rode `ng serve` para um server de desenvolvimento. Abra a pagina `http://localhost:4200/`. A aplicação vai atualizar altomaticamente se você fizer qualquer alteração no código fonte.
 
 ## Deploy
-Caso queira apenas testar a aplicação visite a página `https://gean634n.github.io/calculadora`
+Caso queira apenas testar a aplicação visite a página da [calculadora](https://gean634n.github.io/calculadora-angular)
